@@ -1,3 +1,8 @@
+<style>
+    .offer-area1 {
+        background-image: url({{asset('assets/themes/theme' . $active_theme .'/img/services/5.PNG')}});
+    }
+</style>
 <!-- Offer Area 1 Start Here -->
 <div class="offer-area1 hidden-after-desk">
     <div class="container" dir="rtl">
