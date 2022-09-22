@@ -2,8 +2,8 @@
 <div class="main-slider2">
     <div class="bend niceties preview-1">
         <div id="ensign-nivoslider-3" class="slides" style="height: 600px;">
-            <img src="img/slider-2/1.png" alt="" title="#slider-direction-1" style="height: 100% !important;"/>
-            <img src="img/slider-2/3.png" alt="" title="#slider-direction-3" style="height: 100% !important;"/>
+            <img src="{{asset('assets/themes/theme' . $active_theme .'/img/slider-2/1.PNG')}}" alt="" title="#slider-direction-1" style="height: 100% !important;"/>
+            <img src="{{asset('assets/themes/theme' . $active_theme .'/img/slider-2/3.PNG')}}" alt="" title="#slider-direction-3" style="height: 100% !important;"/>
         </div>
         <div id="slider-direction-1" class="t-cn slider-direction">
             <div class="slider-content t-lfl s-tb slider-1">

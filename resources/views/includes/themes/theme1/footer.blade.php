@@ -57,16 +57,16 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <ul class="payment-method">
                             <li>
-                                <a href="#"><img src="img/payment-method1.jpg" alt="payment-method"></a>
+                                <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/payment-method1.jpg')}}" alt="payment-method"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="img/payment-method2.jpg" alt="payment-method"></a>
+                                <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/payment-method2.jpg')}}" alt="payment-method"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="img/payment-method3.jpg" alt="payment-method"></a>
+                                <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/payment-method3.jpg')}}" alt="payment-method"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="img/payment-method4.jpg" alt="payment-method"></a>
+                                <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/payment-method4.jpg')}}" alt="payment-method"></a>
                             </li>
                         </ul>
                     </div>

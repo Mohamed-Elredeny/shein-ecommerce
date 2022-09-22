@@ -20,7 +20,7 @@
                     <a class="btn-add-to-cart-fill-box4" href="#">تسوق الان</a>
                 </div>
                 <div class="product-img-holder2">
-                    <a href="#"><img src="img/services/3.PNG" alt="product"
+                    <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/services/3.PNG')}}" alt="product"
                                      style="height: 300px !important; width: 100%"></a>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                     <a class="btn-add-to-cart-fill-box4" href="#">تسوق الان</a>
                 </div>
                 <div class="product-img-holder2">
-                    <a href="#"><img src="img/services/2.PNG" alt="product"
+                    <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/services/2.PNG')}}" alt="product"
                                      style="height: 300px !important; width: 100%"></a>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <a class="btn-add-to-cart-fill-box4" href="#">تسوق الان</a>
                 </div>
                 <div class="product-img-holder2">
-                    <a href="#"><img src="img/services/4.PNG" alt="product"
+                    <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/services/4.PNG')}}" alt="product"
                                      style="height: 300px !important; width: 100%"></a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <a class="btn-add-to-cart-fill-box4" href="#">تسوق الان</a>
                 </div>
                 <div class="product-img-holder2">
-                    <a href="#"><img src="img/services/1.PNG" alt="product"
+                    <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/services/1.PNG')}}" alt="product"
                                      style="height: 300px !important; width: 100%"></a>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                     <a class="btn-add-to-cart-fill-box4" href="#">تسوق الان</a>
                 </div>
                 <div class="product-img-holder2">
-                    <a href="#"><img src="img/services/2.PNG" alt="product"
+                    <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/services/2.PNG')}}" alt="product"
                                      style="height: 300px !important; width: 100%"></a>
                 </div>
             </div>

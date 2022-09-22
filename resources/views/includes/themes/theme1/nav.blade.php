@@ -15,7 +15,9 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-2 hidden-xs">
                         <div class="logo-area">
-                            <a href="index.html"><img class="img-responsive" src="img/logo.png" alt="logo"
+                            <a href="index.html"><img class="img-responsive"
+                                                      src="{{asset('assets/themes/theme' . $active_theme .'/img/logo.png')}}"
+                                                      alt="logo"
                                                       style="height: 50px; "></a>
                         </div>
                     </div>
@@ -38,7 +40,7 @@
                                                     <div class="pull-left cart-product-img">
                                                         <a href="#">
                                                             <img class="img-responsive" alt="product"
-                                                                 src="img/best-seller/4.jpg">
+                                                                 src="{{asset('assets/themes/theme' . $active_theme .'/img/best-seller/4.jpg')}}">
                                                         </a>
                                                     </div>
                                                     <div class="media-body cart-content">
@@ -68,7 +70,7 @@
                                                     <div class="pull-left cart-product-img">
                                                         <a href="#">
                                                             <img class="img-responsive" alt="product"
-                                                                 src="img/best-seller/5.jpg">
+                                                                 src="{{asset('assets/themes/theme' . $active_theme .'/img/best-seller/5.jpg')}}">
                                                         </a>
                                                     </div>
                                                     <div class="media-body cart-content">
@@ -198,7 +200,9 @@
                 <div class="row" dir="rtl">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="logo-area">
-                            <a href="index.html"><img class="img-responsive" src="img/logo2.png" alt="logo"
+                            <a href="index.html"><img class="img-responsive"
+                                                      src="{{asset('assets/themes/theme' . $active_theme .'/img/logo2.png')}}"
+                                                      alt="logo"
                                                       style="height: 40px"></a>
                         </div>
                         <div class="main-menu-area home2-sticky-area">

@@ -31,11 +31,6 @@ class DatabaseSeeder extends Seeder
             'menu-1.jpg',
             'menu-2.jpg',
             'menu-3.jpg',
-            'menu-4.jpg',
-            'menu-5.jpg',
-            'menu-6.jpg',
-            'menu-7.jpg',
-            'menu-8.jpg',
         ];
         for ($i = 0; $i < 10; $i++) {
             Category::create([
@@ -44,24 +39,11 @@ class DatabaseSeeder extends Seeder
             ]);
         }
         for ($i = 0; $i < 50; $i++) {
-            $specifications = [
-                'dimensions' => [
-                    'height' => rand(1, 100),
-                    'weight' => rand(1, 100),
-                    'length' => rand(1, 100),
-                ],
-                'specifications' => [
-                    'material' => 'material' . $i,
-                    'color' => 'color' . $i,
-                    'color_degree'=>'color_degree' . $i
-                ]
-            ];
-            $specifications = json_encode($specifications);
             Product::create([
-                'name' => 'product dummy ' . $i,
-                'specifications' => $specifications,
+                'name' => 'E823985' . $i,
+                'details' => 'details' . $i,
                 'price' => rand(100, 5000),
-                'discount_price' => rand(0, 10),
+                'category_id'=>1,
                 'images' => $images_product[rand(0, 2)] . '|' .  $images_product[rand(0, 2)] .  '|' .  $images_product[rand(0, 2)]
             ]);
         }

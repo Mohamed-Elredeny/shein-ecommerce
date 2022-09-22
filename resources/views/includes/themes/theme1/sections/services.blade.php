@@ -9,7 +9,7 @@
                         <h2><a href="#" style="color: white">Flore</a></h2>
                         <a href="#" class="btn-services-shop-now">تسوق الان</a>
                     </div>
-                    <a href="#"><img src="img/services/1.PNG" alt="services" style="height: 100%; width: 100%"></a>
+                    <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/services/1.PNG')}}" alt="services" style="height: 100%; width: 100%"></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="height: 100%">
@@ -19,7 +19,7 @@
                         <h2><a href="#">Women Wear</a></h2>
                         <a href="#" class="btn-services-shop-now">تسوق الان</a>
                     </div>
-                    <a href="#"><img src="img/services/3.PNG" alt="services"
+                    <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/services/3.PNG')}}" alt="services"
                                      style="height: 100% !important; width: 100% !important;"></a>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         <h2><a href="#" style="color: white">Casual Bag</a></h2>
                         <a href="#" class="btn-services-shop-now">تسوق الان</a>
                     </div>
-                    <a href="#"><img src="img/services/5.PNG" alt="services" style="height: 100%; width: 100%"></a>
+                    <a href="#"><img src="{{asset('assets/themes/theme' . $active_theme .'/img/services/5.PNG')}}" alt="services" style="height: 100%; width: 100%"></a>
                 </div>
             </div>
         </div>

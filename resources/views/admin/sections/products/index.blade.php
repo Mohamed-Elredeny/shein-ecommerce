@@ -22,9 +22,13 @@
                                                 <thead>
                                                 <tr>
                                                     <th>الترتيب</th>
-                                                    <th>الاسم</th>
+                                                    <th>كود المنتج</th>
                                                     <th>السعر</th>
-                                                    <th>نسبة الخصم</th>
+                                                    <th>التصنيف</th>
+
+                                                    {{--
+                                                                                                        <th>نسبة الخصم</th>
+                                                    --}}
                                                     <th>التحكم</th>
                                                 </tr>
                                                 </thead>
@@ -35,11 +39,14 @@
                                                         <td>{{$record['name']}}</td>
 
                                                         <td>
-                                                            {{$record->price . ' ₪'}}
+                                                            {{$record->price . ' $'}}
                                                         </td>
                                                         <td>
-                                                            {{$record->discount_price . ' %' }}
+                                                            {{$record->category->name ?? 'Unknown'}}
                                                         </td>
+                                                      {{--  <td>
+                                                            {{$record->discount_price . ' %' }}
+                                                        </td>--}}
 
                                                         <td>
                                                             <a href="{{route('products.edit',['product'=>$record->id])}}"

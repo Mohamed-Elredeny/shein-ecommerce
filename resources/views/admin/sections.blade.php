@@ -1,6 +1,6 @@
 <?php $guard = '' ?>
 <li>
-    <a href="">
+    <a href="{{route('admin.home')}}">
         <div class="parent-icon">
             <ion-icon name="home-sharp"></ion-icon>
         </div>

@@ -13,6 +13,6 @@
 
     @include('includes.themes.theme' . $active_theme . '.sections.products')
 
-    @include('includes.themes.theme' . $active_theme . '.sections.advantageArea')
+    @include('includes.themes.theme' . $active_theme . '.sections.advantagesArea')
 
 @endsection

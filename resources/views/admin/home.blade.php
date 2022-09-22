@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <!--end row-->
+      {{--  <!--end row-->
         <div class="row">
             <div class="col-12 col-lg-12 col-xl-12 d-flex">
                 <div class="card radius-10 w-100">
@@ -156,7 +156,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--}}
         <div class="row">
             <div class="col-xl-6 mx-auto">
                 <h6 class="mb-0 text-uppercase">Confirmation Percentage</h6>

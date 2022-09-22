@@ -17,11 +17,12 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
 
-            $table->string('specifications')->nullable();
+            $table->text('details')->nullable();
 
             $table->float('price');
 
-            $table->float('discount_price');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
 
             $table->text('images')->nullable();
 

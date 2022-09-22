@@ -33,7 +33,7 @@
 
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">اسم المنتج</label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label">كود المنتج</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="text" id="example-text-input" name="name" required value="{{ old('name')}}">
                             </div>
@@ -41,62 +41,25 @@
 
                         <div class="form-group row">
                             <label for="example-text-input" class="col-sm-2 col-form-label">سعر المنتج</label>
-                            <div class="col-sm-4">
+                            <div class="col-sm-10">
                                 <input class="form-control" min="0" type="number" id="example-text-input" name="price"
                                        required value="{{ old('price')}}">
                             </div>
-                            <label for="example-text-input" class="col-sm-2 col-form-label">نسبة الخصم</label>
+
+                          {{--  <label for="example-text-input" class="col-sm-2 col-form-label">نسبة الخصم</label>
                             <div class="col-sm-4">
                                 <input class="form-control" min="0" type="number" id="example-text-input"
                                        name="discount"
                                        required value="{{ old('discount') ?? 0}}">
-                            </div>
+                            </div>--}}
                         </div>
 
+
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-12 col-form-label">الابعاد</label>
-                            <div class="row form-group">
-                                <label for="example-text-input" class="col-sm-1 col-form-label">الطول</label>
-                                <div class="col-sm-3">
-                                    <input class="form-control" name="dimensions[height]" id="example-text-input"
-                                           required value="{{ old('dimensions[height]')}}">
-                                </div>
-                                <label for="example-text-input" class="col-sm-1 col-form-label">العرض</label>
-                                <div class="col-sm-3">
-                                    <input class="form-control" name="dimensions[weight]" id="example-text-input"
-                                           required>
-                                </div>
-                                <label for="example-text-input" class="col-sm-1 col-form-label">الارتفاع</label>
-                                <div class="col-sm-3">
-                                    <input class="form-control" name="dimensions[length]" id="example-text-input"
-                                           required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-12 col-form-label">التفاصيل</label>
-                            <div class="row form-group">
-
-                                <label for="example-text-input" class="col-sm-2 col-form-label">نوع المنتج</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" id="example-text-input"
-                                           name="specifications[material]"
-                                           required>
-                                </div>
-                                <label for="example-text-input" class="col-sm-2 col-form-label">لون المنتج</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" id="example-text-input"
-                                           name="specifications[color]"
-                                           required>
-                                </div>
-                                <label for="example-text-input" class="col-sm-2 col-form-label">درجة اللون </label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" id="example-text-input"
-                                           name="specifications[color_degree]"
-                                           required>
-                                </div>
-
-
+                            <label for="example-text-input" class="col-sm-2 col-form-label">التفاصيل</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control"  id="example-text-input"
+                                       name="details" required>{{ old('details') }}</textarea>
                             </div>
                         </div>
 

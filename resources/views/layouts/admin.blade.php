@@ -59,7 +59,7 @@
             margin: 10px;
         }
     </style>
-    <title>كوينز كوزماتكس</title>
+    <title>{{env('APP_NAME')}}</title>
 
 </head>
 
@@ -77,9 +77,10 @@
 
                 </a>
             </div>
-            <div>
-                <a href="" target="_blank">
-                    <h4 class="logo-text">كوينز كوزماتكس</h4>
+            <div >
+
+                <a href="{{route('admin.home')}}" target="_blank" class="text-center">
+                    <h4 class="logo-text">{{env('APP_NAME')}}</h4>
                 </a>
             </div>
             <div class="toggle-icon ms-auto">

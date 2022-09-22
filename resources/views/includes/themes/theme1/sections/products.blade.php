@@ -22,7 +22,7 @@
                         <div class='hot-sale'>
                             <span>Code</span>
                         </div>
-                        <a href='#'><img src='img/product/1.PNG' alt='product' style='height: 330px'></a>
+                        <a href='#'><img src='{{asset('assets/themes/theme' . $active_theme .'/img/product/1.PNG')}}' alt='product' style='height: 330px'></a>
                     </div>
                     <div class='product-content-holder'>
                         <span>$70.00</span>
@@ -43,7 +43,7 @@
                         <div class='hot-sale'>
                             <span>Code</span>
                         </div>
-                        <a href='#'><img src='img/product/2.PNG' alt='product' style='height: 330px'></a>
+                        <a href='#'><img src='{{asset('assets/themes/theme' . $active_theme .'/img/product/2.PNG')}}' alt='product' style='height: 330px'></a>
                     </div>
                     <div class='product-content-holder'>
                         <span>$70.00</span>
@@ -64,7 +64,7 @@
                         <div class='hot-sale'>
                             <span>Code</span>
                         </div>
-                        <a href='#'><img src='img/product/3.PNG' alt='product' style='height: 330px'></a>
+                        <a href='#'><img src='{{asset('assets/themes/theme' . $active_theme .'/img/product/3.PNG')}}' alt='product' style='height: 330px'></a>
                     </div>
                     <div class='product-content-holder'>
                         <span>$70.00</span>
@@ -85,7 +85,7 @@
                         <div class='hot-sale'>
                             <span>Code</span>
                         </div>
-                        <a href='#'><img src='img/product/4.PNG' alt='product' style='height: 330px'></a>
+                        <a href='#'><img src='{{asset('assets/themes/theme' . $active_theme .'/img/product/4.PNG')}}' alt='product' style='height: 330px'></a>
                     </div>
                     <div class='product-content-holder'>
                         <span>$70.00</span>
@@ -106,7 +106,7 @@
                         <div class='hot-sale'>
                             <span>Code</span>
                         </div>
-                        <a href='#'><img src='img/product/5.PNG' alt='product' style='height: 330px'></a>
+                        <a href='#'><img src='{{asset('assets/themes/theme' . $active_theme .'/img/product/5.PNG')}}' alt='product' style='height: 330px'></a>
                     </div>
                     <div class='product-content-holder'>
                         <span>$70.00</span>
@@ -127,7 +127,7 @@
                         <div class='hot-sale'>
                             <span>Code</span>
                         </div>
-                        <a href='#'><img src='img/product/6.PNG' alt='product' style='height: 330px'></a>
+                        <a href='#'><img src='{{asset('assets/themes/theme' . $active_theme .'/img/product/6.PNG')}}' alt='product' style='height: 330px'></a>
                     </div>
                     <div class='product-content-holder'>
                         <span>$70.00</span>
@@ -148,7 +148,7 @@
                         <div class='hot-sale'>
                             <span>Code</span>
                         </div>
-                        <a href='#'><img src='img/product/1.PNG' alt='product' style='height: 330px'></a>
+                        <a href='#'><img src='{{asset('assets/themes/theme' . $active_theme .'/img/product/1.PNG')}}' alt='product' style='height: 330px'></a>
                     </div>
                     <div class='product-content-holder'>
                         <span>$70.00</span>
@@ -169,7 +169,7 @@
                         <div class='hot-sale'>
                             <span>Code</span>
                         </div>
-                        <a href='#'><img src='img/product/2.PNG' alt='product' style='height: 330px'></a>
+                        <a href='#'><img src='{{asset('assets/themes/theme' . $active_theme .'/img/product/2.PNG')}}' alt='product' style='height: 330px'></a>
                     </div>
                     <div class='product-content-holder'>
                         <span>$70.00</span>

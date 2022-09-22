@@ -35,7 +35,7 @@
 
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">اسم المنتج</label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label">كود المنتج</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="text" id="example-text-input" name="name" required
                                        value="{{ $record['name'] }}">
@@ -43,73 +43,23 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-1 col-form-label">السعر</label>
-                            <div class="col-sm-5">
+                            <label for="example-text-input" class="col-sm-2 col-form-label">السعر</label>
+                            <div class="col-sm-10">
                                 <input class="form-control" min="0" type="number" id="example-text-input" name="price"
                                        required value="{{ $record['price'] }}">
                             </div>
-                            <label for="example-text-input" class="col-sm-1 col-form-label">الخصم</label>
+                          {{--  <label for="example-text-input" class="col-sm-1 col-form-label">الخصم</label>
                             <div class="col-sm-5">
                                 <input class="form-control" min="0" type="number" id="example-text-input"
                                        name="discount"
                                        required value="{{ $record['discount_price'] }}">
-                            </div>
+                            </div>--}}
                         </div>
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-12 col-form-label">الابعاد</label>
-                            <div class="row form-group">
-                                <label for="example-text-input" class="col-sm-1 col-form-label">الطول</label>
-
-                                <div class="col-sm-3">
-                                    <input class="form-control" name="dimensions[height]" id="example-text-input"
-                                           required
-                                           value="{{json_decode($record['specifications'])->dimensions->height ?? null}}">
-                                </div>
-                                <label for="example-text-input" class="col-sm-1 col-form-label">العرض</label>
-                                <div class="col-sm-3">
-                                    <input class="form-control" name="dimensions[weight]" id="example-text-input"
-                                           required
-                                           value="{{json_decode($record['specifications'])->dimensions->weight ?? null}}">
-                                </div>
-                                <label for="example-text-input" class="col-sm-1 col-form-label">الارتفاع</label>
-                                <div class="col-sm-3">
-                                    <input class="form-control" name="dimensions[length]" id="example-text-input"
-                                           required
-                                           value="{{json_decode($record['specifications'])->dimensions->length ?? null}}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-12 col-form-label">التفاصيل</label>
-                            <div class="row form-group">
-
-                                <label for="example-text-input" class="col-sm-2 col-form-label">نوع المنتج</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" id="example-text-input"
-                                           name="specifications[material]"
-                                           required
-                                           value="{{json_decode($record['specifications'])->specifications->material ?? null}}">
-                                </div>
-                                <label for="example-text-input" class="col-sm-2 col-form-label">لون المنتج</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" id="example-text-input"
-                                           name="specifications[color]"
-                                           required
-                                           value="{{json_decode($record['specifications'])->specifications->color ?? null}}">
-                                </div>
-                                <label for="example-text-input" class="col-sm-2 col-form-label">درجة اللون </label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" id="example-text-input"
-                                           name="specifications[color_degree]"
-                                           required
-                                           value="{{json_decode($record['specifications'])->specifications->color_degree ?? null}}">
-
-                                    >
-                                </div>
-
-
-
+                            <label for="example-text-input" class="col-sm-2 col-form-label">التفاصيل</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control"  id="example-text-input" name="details" required >{{  $record['details'] }}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">

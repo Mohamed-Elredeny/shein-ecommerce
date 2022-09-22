@@ -96,18 +96,7 @@ class ProductsController extends Controller
             'category_id' => 'required|exists:categories,id',
             'name' => 'required|min:2',
             'price' => 'required',
-            'discount' => 'required',
-
-            'dimensions.height' => 'required',
-            'dimensions.weight' => 'required',
-            'dimensions.length' => 'required',
-
-
-            'specifications.material' => 'required',
-            'specifications.color' => 'required',
-            'specifications.color_degree' => 'required',
-
-
+            'details' => 'required',
             'images' => 'required'
 
         ]);
@@ -126,25 +115,13 @@ class ProductsController extends Controller
                 $model_type = 'category';
                 $model_id = $request->category_id;
             }
-            $specifications = [
-                'dimensions' => [
-                    'height' => $request->dimensions['height'],
-                    'weight' => $request->dimensions['weight'],
-                    'length' => $request->dimensions['length']
-                ],
-                'specifications' => [
-                    'material' => $request->specifications['material'],
-                    'color' => $request->specifications['color'],
-                    'color_degree' => $request->specifications['color_degree'],
-                ]
-            ];
-            $specifications = json_encode($specifications);
+
             $data = [
                 'name' => $request->name,
-                'specifications' => $specifications,
+                'details' => $request->details,
                 'price' => $request->price,
-                'discount_price' => $request->discount,
                 'images' => $image,
+                'category_id'=>$request->category_id
             ];
 
             return $this->returnData([$this->record], [$this->base->store($data)], '');
@@ -171,26 +148,13 @@ class ProductsController extends Controller
                 $model_type = 'category';
                 $model_id = $request->category_id;
             }
-            $specifications = [
-                'dimensions' => [
-                    'height' => $request->dimensions['height'] ?? json_decode($record['specifications'])->dimensions->height,
-                    'weight' => $request->dimensions['weight'] ?? json_decode($record['specifications'])->dimensions->weight,
-                    'length' => $request->dimensions['length'] ?? json_decode($record['specifications'])->dimensions->length
-                ],
-                'specifications' => [
-                    'material' => $request->specifications['material'] ?? json_decode($record['specifications'])->specifications->material,
-                    'color' => $request->specifications['color'] ?? json_decode($record['specifications'])->specifications->color,
-                    'color_degree' => $request->specifications['color_degree'] ?? json_decode($record['specifications'])->specifications->color_degree
 
-                ]
-            ];
-            $specifications = json_encode($specifications);
             $data = [
                 'name' => $request->name ?? $record->name,
-                'specifications' => $specifications,
+                'details' => $request->details ?? $record->details,
                 'price' => $request->price ?? $record->price,
-                'discount_price' => $request->discount ?? $record->discount,
                 'images' => $image,
+                'category_id'=>$request->category_id ?? $record->category_id,
             ];
 
             $this->base->update($data, $id);

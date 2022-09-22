@@ -26,7 +26,9 @@
                                                     <th>حالة الطلبية</th>
                                                     <th>مدفوعة</th>
                                                     <th>سعر الطلبية</th>
-                                                    <th>السعر بعد الخصم</th>
+                                                    {{--
+                                                                                                        <th>السعر بعد الخصم</th>
+                                                    --}}
                                                     <th>تاريخ الطلبية</th>
                                                     <th>التحكم</th>
                                                 </tr>
@@ -37,7 +39,7 @@
                                                         <td>{{$record->id}}</td>
                                                         <td>{{$record['name_' . App::getlocale()]}}</td>
                                                         <td>{{$record->model_type}}</td>
-                                                    @if($record->is_brand)
+                                                        @if($record->is_brand)
                                                             <td>{{$record->brand->name ?? 'Unknown'}}</td>
                                                         @else
                                                             <td>{{'System'}}</td>
