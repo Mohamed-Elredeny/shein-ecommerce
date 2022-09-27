@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymobController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +18,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ], function () { //...
+
+    Auth::routes();
 
 
-Auth::routes();
+    Route::get('/', function () {
+        return view('index');
+    })->name('index');
 
+    /*Login*/
+    Route::get('view/login', [LoginController::class, 'showLoginForm'])->name('auth.login');
+    Route::post('login/post', [LoginController::class, 'UserLogin'])->name('auth.login.post');
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+    /*Register*/
+    Route::get('view/register', [RegisterController::class, 'showRegisterForm'])->name('auth.register');
+    Route::post('register/post', [RegisterController::class, 'create'])->name('auth.register.post');
 
-Route::get('view/login',[LoginController::class,'showLoginForm'])->name('auth.login');
-Route::post('login/post', [LoginController::class,'UserLogin'])->name('auth.login.post');
+    /*Profile*/
+    Route::get('profile', [HomeController::class, 'profile'])->name('profile.show');
+    Route::post('profile/update', [HomeController::class, 'update'])->name('profile.update');
 
-Route::get('paymob', [PaymobController::class,'processToken']);
+    Route::get('paymob', [PaymobController::class, 'processToken']);
+});

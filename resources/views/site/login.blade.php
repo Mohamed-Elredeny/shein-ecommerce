@@ -8,13 +8,13 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <h4>تسجيل دخول</h4>
-                            <p>تسجيل دخول الي حسابك</p>
                         </div>
                         <form class="form-body row g-3" method="POST" action="{{ route('auth.login.post')}}">
                             @csrf
                             <div class="col-12">
                                 <label for="inputEmail" class="form-label">البريد الالكتروني</label>
-                                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="abc@example.com">
+                                <input type="email" name="email" class="form-control" id="inputEmail"
+                                       placeholder="abc@example.com">
                             </div>
                             <div class="col-12">
                                 <label for="inputPassword" class="form-label">كلمة المرور</label>
@@ -27,7 +27,14 @@
 
                             <div class="col-12 col-lg-12">
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary">تسجيل دخول</button>
+                                    <button type="submit" class="btn btn-primary-site">تسجيل دخول</button>
+                                    <span>
+                                              لا تمتلك حساب؟
+                                    <a href="{{route('auth.register')}}"
+                                       style="display:inline-block"> قم بالتسجيل الان </a>
+
+                                  </span>
+
                                 </div>
                             </div>
 

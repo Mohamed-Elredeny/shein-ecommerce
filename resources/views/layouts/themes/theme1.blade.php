@@ -7,20 +7,28 @@
     <title> {{env('APP_NAME')}} </title>
     <meta name="description" content=" {{env('APP_DESCRIPTION')}}">
     @include('includes.themes.theme1.heading')
+    @if(App::getlocale() == 'ar')
+        <style>
+            * {
+                font-family: 'cairo';
+                direction: rtl;
+            }
+        </style>
+    @endif
 </head>
 
 <body>
 <div class="wrapper-area">
 
     <!-- Header Area Start Here -->
-    @include('includes.themes.theme1.nav')
-    <!-- Header Area End Here -->
+@include('includes.themes.theme1.nav')
+<!-- Header Area End Here -->
 
-    @yield('content')
+@yield('content')
 
-    <!-- Footer Area Start Here -->
-    @include('includes.themes.theme1.footer')
-    <!-- Footer Area End Here -->
+<!-- Footer Area Start Here -->
+@include('includes.themes.theme1.footer')
+<!-- Footer Area End Here -->
 </div>
 <!-- Modal Dialog Box Start Here-->
 <div id="myModal" class="modal fade" role="dialog">
@@ -69,7 +77,7 @@
                             <div class="inner-product-details-left">
                                 <div class="tab-content">
                                     <div id="metro-related1" class="tab-pane fade active in">
-                                        <a href="#"><img class="img-responsive" src="img/product/3.PNG"
+                                        <a href="#"><img class="img-responsive" src="{{asset('assets/themes/theme' . $active_theme . '/img/product/3.PNG')}}"
                                                          alt="single"></a>
                                     </div>
                                 </div>

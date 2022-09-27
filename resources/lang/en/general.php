@@ -13,10 +13,8 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'login'=>'Login',
-    'register'=>'Register',
-    'logout'=>'Logout'
+    'account' => 'Account',
+    'favorite' => 'Favorite',
+    'add_to_favorite'=>'Add To Favorite',
+    'remove_from_favorite'=>'Remove From Favorite',
 ];

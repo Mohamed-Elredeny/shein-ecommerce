@@ -6,10 +6,18 @@
                     <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
                         <div class="account-wishlist">
                             <ul>
-                                <li><a href="login-registration.html"><i class="fa fa-lock" aria-hidden="true"></i>
-                                        الحساب </a></li>
-                                <li><a href="wishlist.html"><i class="fa fa-heart-o" aria-hidden="true"></i> المفضلة
-                                    </a></li>
+                                @if(Auth::user())
+                                    <li><a href="{{route('profile.show')}}"><i class="fa fa-lock" aria-hidden="true"></i>
+                                            {{__('general.account')}}
+                                        </a></li>
+                                    <li><a href="wishlist.html"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                            {{__('general.favorite')}}
+                                        </a></li>
+                                @else
+                                    <li><a href="{{route('auth.login')}}"><i class="fa fa-lock" aria-hidden="true"></i>
+                                            {{__('auth.login')}}
+                                        </a></li>
+                                @endif
                             </ul>
                         </div>
                     </div>

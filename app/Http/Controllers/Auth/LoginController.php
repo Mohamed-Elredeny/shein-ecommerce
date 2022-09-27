@@ -43,6 +43,12 @@ class LoginController extends Controller
             // if successful, then redirect to their intended location
             return redirect()->route('admin.home');
         }
+        if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            config()->set('auth.defaults.guard', 'web');
+            //return 1;
+            // if successful, then redirect to their intended location
+            return redirect()->route('index');
+        }
 
 
         return redirect()->route('auth.login')->withErrors(['msg' => 'تاكد من صحة البريد الالكتروني او كلمة المرور']);

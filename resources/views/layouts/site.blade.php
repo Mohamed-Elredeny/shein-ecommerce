@@ -19,8 +19,8 @@
         <?php $lang = 'ltr'?>
         <style>
             * {
-                direction: ltr;
-                text-align: left;
+                direction: rtl;
+                text-align: right;
             }
 
             a {
@@ -28,7 +28,7 @@
             }
         </style>
     @endif
-
+    @php $active_theme=1;@endphp
 
     <link rel="icon" type="image/x-icon" href="{{asset('assets/web/favicon.ico')}}"/>
     <!-- Bootstrap icons-->
@@ -51,35 +51,49 @@
             margin: 10px;
         }
     </style>
-    <title>كوينز كوزماتكس</title>
+    <title>{{env('APP_NAME')}}</title>
+    <style>
+        .btn-primary-site {
+            border: 1px solid #00BCD4;
+            background: #00BCD4;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #FFFFFF
+        }
 
+        .btn-primary-site:hover {
+            font-weight: 600;
+            color: #FFFFFF
+        }
+
+    </style>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm " id="mainNav">
-    <div class="container px-5">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="bi-list"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+<header>
+    <div class="header-area-style2" id="sticker">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                        <div class="account-wishlist">
+                            <br>
+                            <a class="btn btn-primary-site" href="{{route('index')}}">
+                                                            العودة للرئيسية
 
+                            </a>
 
-            </ul>
-            <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
-                    data-bs-target="#">
-                        <span class="d-flex align-items-center">
-                            <i class="bi-chat-text-fill me-2"></i>
-                            <span class="small">كوينز كوزماتكس</span>
-                        </span>
-            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+</header>
 
 <!--start wrapper-->
-<div class="container wrapper mt-5 "  style="height:100% !important">
+<div class="container wrapper mt-5 " style="height:100% !important">
     <div class="row">
         @if($errors->any())
             <center>
